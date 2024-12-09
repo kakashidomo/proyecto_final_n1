@@ -1,0 +1,15 @@
+#buttonCalculator {
+background-color: hsl(61, 70%, 52%);
+font-size: 16px;
+#buttonCalculator image {
+    color: brown !important;
+}
+
+}
+#contentGeneralModal{
+background-color: hsl(204, 63%, 19%) !important;
+}
+#contentResult {
+border-color: hsl(61, 70%, 52%) !important;
+background-color: hsl(205, 74%, 15%) !important;
+}
