@@ -1,15 +1,38 @@
-#buttonCalculator {
-background-color: hsl(61, 70%, 52%);
-font-size: 16px;
-#buttonCalculator image {
-    color: brown !important;
+span {
+    
+    background-color: rgb(227, 243, 249) !important;
+    
 }
 
+#buttonCalculator {
+    background-color: hsl(61, 70%, 52%);
+    font-size: 16px;
 }
-#contentGeneralModal{
-background-color: hsl(204, 63%, 19%) !important;
+
+#aaaa {
+    background-color: hsl(204, 63%, 19%) !important;
+    
 }
+
+#parrafo {
+    font-size: 12px !important;
+}
+
+#contentGeneralModal {
+    background-color: hsl(204, 63%, 19%) !important;
+}
+
 #contentResult {
-border-color: hsl(61, 70%, 52%) !important;
-background-color: hsl(205, 74%, 15%) !important;
+    border-color: hsl(61, 70%, 52%) !important;
+    background-color: hsl(203, 83%, 12%) !important;
+}
+#inputModal1 {
+    font-size: 30px;
+    color:  hsl(61, 70%, 52%);
+    background-color: transparent;
+}
+#inputModal2 {
+    font-size: 30px;
+    color:  hsl(61, 70%, 52%);
+    background-color: transparent;
 }
