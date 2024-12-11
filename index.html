@@ -15,21 +15,21 @@
 </head>
 
 <body>
-  <div class="container d-flex">
-    <div class="row">
+  <div id="principal" class="container d-flex bg-white ms-md-1 me-md-1">
+    <div class="row ">
       <div class="col">
-        <div class="col-12">
+        <div id="formatogeneral" class="col-sm-12 col-md-6">
           <div class="">
             <h1 class="mt-4">Mortgage Calculator</h1>
             <button type="button" class="btn btn-link mb-5 text-black-50">Clear All</button>
           </div>
-          <div>
+          <div id="formularioUno">
             <form action="">
               <div>
                 <label for="monto" class="form-label">Mortgage Amount</label>
                 <div class="input-group mb-3 border border-secondary rounded">
                   <span class="input-group-text">$</span>
-                  <input id="monto" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <input id="monto" type="text" class="form-control shadow-none border-0" aria-label="Amount">
                 </div>
                 <div class="form-text text-danger d-none" id="basic-addon1">
                   <p>This field is required</p>
@@ -38,7 +38,7 @@
               <div>
                 <label for="years" class="form-label">Mortgage Term</label>
                 <div class="input-group mb-3 border border-secondary rounded">
-                  <input id="years" type="number" class="form-control" aria-label="years">
+                  <input id="years" type="number" class="form-control shadow-none border-0" aria-label="years">
                   <span class="input-group-text">years</span>
                 </div>
                 <div class="form-text text-danger d-none" id="basic-addon2">
@@ -48,7 +48,7 @@
               <div>
                 <label for="porcent" class="form-label">Mortgage Rate</label>
                 <div class="input-group mb-3 border border-secondary rounded">
-                  <input id="porcent" type="number" class="form-control" aria-label="porcent">
+                  <input id="porcent" type="number" class="form-control shadow-none border-0" aria-label="porcent">
                   <span class="input-group-text  fst-italic fw-bolder">%</span>
                 </div>
                 <div class="form-text text-danger d-none" id="basic-addon3">
@@ -58,15 +58,15 @@
               <div class="">
                 <p>Mortgage Type</p>
                 <div class="form-check border border-secondary border-2 py-2 mb-2 rounded">
-                  <input class="form-check-input d-none" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <input class="form-check-input shadow-none" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Repayment
                   </label>
                 </div>
                 <div class="form-check border border-secondary border-2 border- py-2 rounded mb-2">
-                  <input class="form-check-input d-none" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                  <input class="form-check-input shadow-none" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
                     checked>
-                  <label class="form-check-labe" for="flexRadioDefault2">
+                  <label class="form-check-label" for="flexRadioDefault2">
                     Interest Only
                   </label>
                 </div>
@@ -74,7 +74,7 @@
                   <p>This field is required</p>
                 </div>
               </div>
-              <div class="d-grid d-md-flex gap-2 mb-4">
+              <div class="d-grid d-flex gap-2 mb-4">
                 <button id="buttonCalculator" class="btn rounded-pill fw-bold" type="button"><img
                     src="./assets/images/icon-calculator.svg" alt="">
                   Calculate Repayments</button>
@@ -85,46 +85,47 @@
 
 
       </div>
-      <div class="col col-12 d-grid">
-        <div id="aaaa" class=" text-white">
-          <div class="text-center pt-4 pb-3">
-            <img id="image1" src="./assets/images/illustration-empty.svg" alt="calculadora imagen">
+      <div id="contenidoGeneralUno" class="col col-sm-12 col-md-6 d-flex d-md-grid  text-white ">
+        <div class="text-center pt-4 pb-3">
+          <img id="image1" src="./assets/images/illustration-empty.svg" alt="calculadora imagen">
+        </div>
+        <div class="text-center">
+          <h6>Results shown here</h6>
+        </div>
+        <div class="text-center justify-content-center align-content-center m-3  pb-2">
+          <p id="parrafo">Complete the form and click "calculate repayments" to see what your monthly repayments would
+            be</p>
+        </div>
+      </div>
+      <div id="contentGeneralDos" class="">
+        <div class="text-start text-white pt-4 ps-2 p-md-4">
+          <div class="mb-md-4">
+            <h2>Your results</h2>
           </div>
-          <div class="text-center">
-            <h6>Results shown here</h6>
-          </div>
-          <div class="text-center justify-content-center align-content-center m-3  pb-2">
-            <p id="parrafo">Complete the form and click "calculate repayments" to see what your monthly repayments would
-              be</p>
+          <div class="body mb-3">
+            <p>Your results are shown below based on the information you provided. To adjust the results, edit the
+              form
+              and click "calculate repayments" again.</p>
           </div>
         </div>
+        <div id="contentResult"
+          class="col col-12 col-md-6  d-md-grid border  border-5 border-bottom-0 border-start-0 border-end-0 py-3 mb-5 me-2 mx-2 rounded ps-3 m-md-4 ">
+          <form action="" class="">
+            <div class="mb-3">
+              <label class="text-white" for="inputGeneralDos1">Your monthly repayments</label>
+              <input id="inputGeneralDos1" class="border border-0 p-2 m-0 bg-black w-75" type="text" disabled>
 
-        <div id="contentGeneralModal" class="modal">
-          <div class="text-start text-white pt-4 ps-2">
-            <h2>Your results</h2>
-            <div class="modal-body mb-3">
-              <p>Your results are shown below based on the information you provided. To adjust the results, edit the
-                form
-                and click "calculate repayments" again.</p>
             </div>
-          </div>
-          <div id="contentResult"
-            class="border  border-5 border-bottom-0 border-start-0 border-end-0 py-3 mb-5 me-2 mx-2 rounded ps-3">
-            <form action="">
-              <div class="mb-3">
-                <label class="text-white" for="inputModal1">Your monthly repayments</label>
-                <input id="inputModal1" class="border border-0 p-2 m-0 bg-black w-75" type="text" disabled>
+            <hr class="border me-3">
 
-              </div>
-              <div class="text-white">
-                <label for="inputModal2">Your monthly repayments</label>
-                <input id="inputModal2" class="border border-0 p-2 m-0 bg-black w-75 text-white" type="text" disabled>
+            <div class="text-white">
+              <label for="inputGeneralDos2">Your monthly repayments</label>
+              <input id="inputGeneralDos2" class="border border-0 p-2 m-0 bg-black w-75 text-white" type="text"
+                disabled>
 
-              </div>
+            </div>
 
-            </form>
-
-          </div>
+          </form>
 
         </div>
 
