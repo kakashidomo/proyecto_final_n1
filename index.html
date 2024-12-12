@@ -4,100 +4,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="./style/main.css">
+  <script src="./main/main.js" defer></script>
 
   <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+
 </head>
 
 <body>
-  <div id="principal" class="container d-flex bg-white ms-md-1 me-md-1">
-    <div class="row ">
-      <div class="col">
-        <div id="formatogeneral" class="col-sm-12 col-md-6">
+  <div id="principal" class="container d-flex bg-white ms-md-2 me-md-2 mt-md-5">
+    <div class="row">
+      <div id="formularioUno" class="col-12 col-md-6">
+        <div id="formatogeneral" class="">
           <div class="">
             <h1 class="mt-4">Mortgage Calculator</h1>
-            <button type="button" class="btn btn-link mb-5 text-black-50">Clear All</button>
+            <button type="button" class="btn btn-link mb-5 text-black-50" id="clearButton">Clear All</button>
           </div>
-          <div id="formularioUno">
-            <form action="">
-              <div>
-                <label for="monto" class="form-label">Mortgage Amount</label>
-                <div class="input-group mb-3 border border-secondary rounded">
-                  <span class="input-group-text">$</span>
-                  <input id="monto" type="text" class="form-control shadow-none border-0" aria-label="Amount">
-                </div>
-                <div class="form-text text-danger d-none" id="basic-addon1">
-                  <p>This field is required</p>
-                </div>
+          <form action="" id="mortgageForm">
+            <div>
+              <label for="monto" class="form-label">Mortgage Amount</label>
+              <div class="input-group mb-3 border border-secondary rounded">
+                <span class="input-group-text">$</span>
+                <input id="monto" type="text" class="form-control shadow-none border-0" aria-label="Amount">
               </div>
-              <div>
-                <label for="years" class="form-label">Mortgage Term</label>
-                <div class="input-group mb-3 border border-secondary rounded">
-                  <input id="years" type="number" class="form-control shadow-none border-0" aria-label="years">
-                  <span class="input-group-text">years</span>
-                </div>
-                <div class="form-text text-danger d-none" id="basic-addon2">
-                  <p>This field is required</p>
-                </div>
+              <div class="form-text text-danger d-none" id="errorMonto">
+                <p>This field is required</p>
               </div>
-              <div>
-                <label for="porcent" class="form-label">Mortgage Rate</label>
-                <div class="input-group mb-3 border border-secondary rounded">
-                  <input id="porcent" type="number" class="form-control shadow-none border-0" aria-label="porcent">
-                  <span class="input-group-text  fst-italic fw-bolder">%</span>
-                </div>
-                <div class="form-text text-danger d-none" id="basic-addon3">
-                  <p>This field is required</p>
-                </div>
+            </div>
+            <div>
+              <label for="years" class="form-label">Mortgage Term</label>
+              <div class="input-group mb-3 border border-secondary rounded">
+                <input id="years" type="number" class="form-control shadow-none border-0" aria-label="Years">
+                <span class="input-group-text">years</span>
               </div>
-              <div class="">
-                <p>Mortgage Type</p>
-                <div class="form-check border border-secondary border-2 py-2 mb-2 rounded">
-                  <input class="form-check-input shadow-none" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    Repayment
-                  </label>
-                </div>
-                <div class="form-check border border-secondary border-2 border- py-2 rounded mb-2">
-                  <input class="form-check-input shadow-none" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-                    checked>
-                  <label class="form-check-label" for="flexRadioDefault2">
-                    Interest Only
-                  </label>
-                </div>
-                <div class="form-text text-danger d-none" id="basic-addon4">
-                  <p>This field is required</p>
-                </div>
+              <div class="form-text text-danger d-none" id="errorYears">
+                <p>This field is required</p>
               </div>
-              <div class="d-grid d-flex gap-2 mb-4">
-                <button id="buttonCalculator" class="btn rounded-pill fw-bold" type="button"><img
-                    src="./assets/images/icon-calculator.svg" alt="">
-                  Calculate Repayments</button>
+            </div>
+            <div>
+              <label for="porcent" class="form-label">Mortgage Rate</label>
+              <div class="input-group mb-3 border border-secondary rounded">
+                <input id="porcent" type="number" class="form-control shadow-none border-0" aria-label="Rate">
+                <span class="input-group-text fst-italic fw-bolder">%</span>
               </div>
-            </form>
-          </div>
-        </div>
-
-
-      </div>
-      <div id="contenidoGeneralUno" class="col col-sm-12 col-md-6 d-flex d-md-grid  text-white ">
-        <div class="text-center pt-4 pb-3">
-          <img id="image1" src="./assets/images/illustration-empty.svg" alt="calculadora imagen">
-        </div>
-        <div class="text-center">
-          <h6>Results shown here</h6>
-        </div>
-        <div class="text-center justify-content-center align-content-center m-3  pb-2">
-          <p id="parrafo">Complete the form and click "calculate repayments" to see what your monthly repayments would
-            be</p>
+              <div class="form-text text-danger d-none" id="errorPorcent">
+                <p>This field is required</p>
+              </div>
+            </div>
+            <div class="">
+              <p>Mortgage Type</p>
+              <div class="form-check border border-secondary border-2 py-2 mb-2 rounded">
+                <input class="form-check-input shadow-none" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                  checked>
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Repayment
+                </label>
+              </div>
+              <div class="form-check border border-secondary border-2 py-2 mb-2 rounded">
+                <input class="form-check-input shadow-none" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Interest Only
+                </label>
+              </div>
+              <div class="form-text text-danger d-none" id="basic-addon4">
+                <p>This field is required</p>
+              </div>
+            </div>
+            <div class="d-grid d-flex gap-2 mb-4">
+              <button id="buttonCalculator" class="btn rounded-pill fw-bold" type="submit">
+                <img src="./assets/images/icon-calculator.svg" alt="Calculator Icon">
+                Calculate Repayments
+              </button>
+            </div>
+          </form>
         </div>
       </div>
-      <div id="contentGeneralDos" class="">
+
+      <div id="contenidoGeneralUno" class="col-12 col-md-6">
+        <div class="d-md-grid text-white">
+          <div class="text-center pt-4 pb-3">
+            <img id="image1" src="./assets/images/illustration-empty.svg" alt="Empty calculator illustration">
+          </div>
+          <div class="text-center">
+            <h6>Results shown here</h6>
+          </div>
+          <div class="text-center justify-content-center align-content-center m-sm-3 pb-ms-2">
+            <p id="parrafo">Complete the form and click "calculate repayments" to see what your monthly repayments would
+              be</p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="contentGeneralDos" class="d-none col-12 col-md-6">
         <div class="text-start text-white pt-4 ps-2 p-md-4">
           <div class="mb-md-4">
             <h2>Your results</h2>
@@ -109,37 +111,24 @@
           </div>
         </div>
         <div id="contentResult"
-          class="col col-12 col-md-6  d-md-grid border  border-5 border-bottom-0 border-start-0 border-end-0 py-3 mb-5 me-2 mx-2 rounded ps-3 m-md-4 ">
-          <form action="" class="">
+          class="col col-12 d-md-grid border border-5 border-bottom-0 border-start-0 border-end-0 py-3 mb-5 me-2  rounded ps-3 ">
+          <form action="">
             <div class="mb-3">
               <label class="text-white" for="inputGeneralDos1">Your monthly repayments</label>
-              <input id="inputGeneralDos1" class="border border-0 p-2 m-0 bg-black w-75" type="text" disabled>
-
+              <input id="inputGeneralDos1" class="border border-0 p-2 m-0 bg-black w-75" type="text"
+                placeholder="€ 0.00" disabled>
             </div>
             <hr class="border me-3">
-
             <div class="text-white">
               <label for="inputGeneralDos2">Your monthly repayments</label>
               <input id="inputGeneralDos2" class="border border-0 p-2 m-0 bg-black w-75 text-white" type="text"
-                disabled>
-
+                placeholder="€ 0.00" disabled>
             </div>
-
           </form>
-
         </div>
-
       </div>
     </div>
-
   </div>
-
-
-
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Gustavo Lastra</a>.
-  </div> -->
 </body>
 
 </html>
