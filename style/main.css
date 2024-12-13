@@ -6,7 +6,15 @@ span {
     
     background-color: rgb(227, 243, 249) !important;
     
+    
 }
+input:focus  {
+    background-color: rgb(212, 245, 162) !important;
+}
+input:focus + span  {
+    background-color: rgb(177, 241, 81) !important;
+}
+
 .input-error {
     border: 2px solid red !important;
   }
