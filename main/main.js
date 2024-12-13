@@ -70,7 +70,6 @@ form.addEventListener('submit', function (e) {
     if (radioRepayment.checked) {
         result = calculatePayment(montoValor, porcentValor, yearsValor);
         inputGeneralDos2.value = `€ ${result}`;
-        inputGeneralDos1.value = `€ ${result}`;
     } else if (radioInterestOnly.checked) {
         result = calculateInterest(montoValor, porcentValor);
         inputGeneralDos1.value = `€ ${result}`;
